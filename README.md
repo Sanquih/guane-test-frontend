@@ -2,6 +2,7 @@
 
 ## Project setup
 ```
+cd .\rickandmorty\
 npm install
 ```
 
