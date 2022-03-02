@@ -10,7 +10,6 @@ import Footer from "@/components/Footer.vue";
   </div>
 </template>
 
-
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
