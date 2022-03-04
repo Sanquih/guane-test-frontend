@@ -2,7 +2,10 @@
   <div>
     <div class="image-gallery field grid" v-for="m in 2" :key="m">
       <div class="col-2" v-for="n in 5" :key="n">
-        <Card v-if="characters[first * 10 + 5 * (m - 1) + n - 1]">
+        <Card
+          v-if="characters[first * 10 + 5 * (m - 1) + n - 1]"
+          @click="selectCharacter(first * 10 + 5 * (m - 1) + n - 1)"
+        >
           <template #header>
             <img
               v-if="characters[first * 10 + 5 * (m - 1) + n - 1]"
@@ -46,17 +49,16 @@ export default {
     };
   },
   methods: {
-    reset() {
-      //   this.first = 0;
-      //   document.getElementById("img").src = this.characters[this.first].image;
+    selectCharacter(index) {
+      this.$store.dispatch("setCharacter", this.characters[index]);
+      localStorage.setItem("character", JSON.stringify(this.characters[index]));
+      this.$router.push("Character");
     },
   },
   mounted() {
     let vue = this;
     axios.get("https://rickandmortyapi.com/api/character").then(function (res) {
       vue.characters = res.data.results;
-      //   console.log(vue.characters);
-      //   console.log(res)
     });
   },
 };
@@ -64,7 +66,6 @@ export default {
 
 <style scoped>
 .image-gallery {
-  /* text-align: -webkit-center; */
   place-content: center;
   padding: 1rem;
 }
