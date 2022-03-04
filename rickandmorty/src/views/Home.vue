@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="image-gallery field grid" v-for="m in 2" :key="m">
-      <div class="col-2" v-for="n in 5" :key="n">
-        <Card
+      <div class="cursor-pointer col-2" v-for="n in 5" :key="n">
+        <Card class="shadow-5 transition-duration-400 hover:surface-300"
           v-if="characters[first * 10 + 5 * (m - 1) + n - 1]"
           @click="selectCharacter(first * 10 + 5 * (m - 1) + n - 1)"
         >
@@ -27,18 +27,20 @@
       </div>
     </div>
 
-    <Paginator
+    <Paginator      
       v-model:first="first"
       :rows="1"
       :totalRecords="totalRecords"
       template="FirstPageLink PrevPageLink CurrentPageReport NextPageLink LastPageLink"
     >
     </Paginator>
+    
   </div>
 </template>
 
 <script>
 import axios from "axios";
+import "../assets/sass/home.css";
 
 export default {
   data() {
@@ -63,10 +65,3 @@ export default {
   },
 };
 </script>
-
-<style scoped>
-.image-gallery {
-  place-content: center;
-  padding: 1rem;
-}
-</style>

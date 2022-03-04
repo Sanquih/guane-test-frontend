@@ -1,0 +1,14 @@
+@import "./colors";
+
+nav {
+    padding: 30px;
+  }
+  
+  nav a {
+    font-weight: bold;
+    color: $normal-color;
+  }
+  
+  nav a.router-link-exact-active {
+    color: $highlighted-color;
+  }

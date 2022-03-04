@@ -1,24 +1,15 @@
+<script setup>
+import "../assets/sass/footer.css";
+</script>
+
 <template>
   <div>
-    <!-- <InputText v-model="text" />
-    <Button label="Greet" icon="pi pi-user" @click="greet"></Button>
-    {{ text }} -->
+    <footer>
+      <p>
+        <strong>Author:</strong> Santiago Quintero Hincapié<br />
+        <i class="pi pi-github"></i>
+        <a href="https://github.com/SanquihUdeA/guane-test-frontend">Sanquih</a>
+      </p>
+    </footer>
   </div>
 </template>
-
-<script>
-// export default {
-//   data() {
-//     return {
-//       text: "PrimeVueeeeñ.ñ",
-//     };
-//   },
-//   methods: {
-//     greet() {
-//       console.log(this.text);
-//       this.$store.commit("increment");
-//       console.log(this.$store.state.count);
-    // },
-//   },
-// };
-</script>

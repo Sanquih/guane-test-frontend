@@ -1,0 +1,12 @@
+body {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  color: #2c3e50;
+  text-align: center;
+  background-attachment: fixed !important;
+  background: linear-gradient(to bottom, #a9d3e9, white);
+  position: relative !important;
+  padding-bottom: 3em;
+  min-height: 97vh;
+}
+
+/*# sourceMappingURL=app.css.map */

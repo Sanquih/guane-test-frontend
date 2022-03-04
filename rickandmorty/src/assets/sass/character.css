@@ -1,0 +1,8 @@
+div .content {
+  text-align: justify;
+}
+div .picture {
+  -webkit-writing-mode: vertical-rl;
+}
+
+/*# sourceMappingURL=character.css.map */

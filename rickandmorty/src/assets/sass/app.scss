@@ -1,0 +1,12 @@
+@import "./colors";
+
+body {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  color: $normal-color;
+  text-align: center;
+  background-attachment: fixed !important;
+  background: linear-gradient(to bottom, $background-color, white);  
+  position: relative !important;
+  padding-bottom: 3em;
+  min-height: 97vh;
+}
